@@ -5,70 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
   
   <title>Frontend Mentor | Product list with cart</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<main>
+  <div class="product-list">
+    <h1>Desserts</h1>
 
-  Desserts
+    <div class="product-grid" id="product-grid">
 
-  Waffle with Berries
-  Waffle
-  6.50
-  Add to Cart
+    </div>
+    <div class="cart">
+      <h2>Your Cart (<span class="cart-quantity">7</span>)</h2>
+      <div class="cart-empty-img">
+        <img src="assets/images/illustration-empty-cart.svg" alt="">
+      </div>
+      <ul class="cart-list">
+        <li>Your added items will appear here</li>
 
-  Vanilla Bean Crème Brûlée
-  Crème Brûlée
-  7.00
-  Add to Cart
 
-  Macaron Mix of Five
-  Macaron
-  8.00
-  Add to Cart
-
-  Classic Tiramisu
-  Tiramisu
-  5.50
-  Add to Cart
-
-  Pistachio Baklava
-  Baklava
-  4.00
-  Add to Cart
-
-  Lemon Meringue Pie
-  Pie
-  5.00
-  Add to Cart
-
-  Red Velvet Cake
-  Cake
-  4.50
-  Add to Cart
-
-  Salted Caramel Brownie
-  Brownie
-  4.50
-  Add to Cart
-
-  Vanilla Panna Cotta
-  Panna Cotta
-  6.50
-  Add to Cart
-
-  Your Cart (<!-- Quantity -->)
-  Your added items will appear here
-
+      </ul>
+    </div>
+  </div>
+</main>
+<footer>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Evelyne Mukasa</a>.
   </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

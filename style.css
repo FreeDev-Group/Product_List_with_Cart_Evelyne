@@ -301,15 +301,20 @@ main{
   background: rgba(0, 0, 0, 0.4);
   display: none;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   z-index: 1000;
 }
-
+@media (min-width:768px) {
+    .modal-overlay{
+        align-items: center;
+    }
+    
+}
 /* Modal Box */
 .modal {
   background: #fff;
-  width: 350px;
-  max-width: 90%;
+  width: 500px;
+  max-width: 100%;
   border-radius: 12px;
   padding: 24px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -317,7 +322,6 @@ main{
 
 /* Modal Header */
 .modal-header {
-  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -325,7 +329,7 @@ main{
   font-size: 32px;
   color: green;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom:10px ;
 }
 
 .modal h2 {
@@ -341,10 +345,9 @@ main{
 /* Modal Order Items */
 .modal-order-items {
   list-style: none;
-  padding: 0;
+  padding: 10px;
   margin: 16px 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  background-color: var(--Rose50);
 }
 
 .modal-order-items li {
@@ -365,12 +368,23 @@ main{
 }
 
 .modal-order-items .item-info {
-  display: flex;
-  flex-direction: column;
+
   gap: 2px;
   flex: 1;
 }
-
+.item-name{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+.item-quantity{
+    display: inline;
+    color: var(--Red);
+}
+.item-unit-price{
+    display: inline;
+}
 /* Modal Total */
 .modal-total {
   display: flex;
@@ -378,6 +392,7 @@ main{
   font-weight: bold;
   margin-top: 12px;
   font-size: 16px;
+  background-color: var(--Rose50);
 }
 
 /* Modal Close Button */
@@ -387,7 +402,7 @@ main{
   padding: 10px;
   background: #d9480f;
   color: #fff;
-  border-radius: 6px;
+  border-radius: 50px;
   cursor: pointer;
 }
 

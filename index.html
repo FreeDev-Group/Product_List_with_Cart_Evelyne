@@ -2,46 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
-  
   <title>Frontend Mentor | Product list with cart</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
   <div class="product-list">
     <h1>Desserts</h1>
-
-    <div class="product-grid" id="product-grid">
-
-
-    </div>
-  
+    <div class="product-grid" id="product-grid"></div>
   </div>
+
   <div class="cart">
     <h2 class="cart-title">Your Cart (<span class="cart-count">0</span>)</h2>
-
     <div class="cart-empty">
       <img class="cart-empty-img" src="assets/images/illustration-empty-cart.svg" alt="Empty cart illustration">
       <p class="cart-empty-text">Your added items will appear here</p>
     </div>
-
     <ul class="cart-items"></ul>
-
     <div class="cart-total-container">
       <span>Total: $<span class="cart-total">0.00</span></span>
     </div>
-
     <p class="cart-carbon">This is a carbon-neutral delivery 🌱</p>
-
     <button class="cart-confirm">Confirm Order</button>
   </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="order-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <span class="modal-icon">✔️</span>
+        <h2>Order Confirmed</h2>
+        <p>We hope you enjoy your food!</p>
+      </div>
+      <ul class="modal-order-items"></ul>
+      <div class="modal-total">
+        <span>Order Total</span>
+        <span class="order-total-amount">$0.00</span>
+      </div>
+      <button class="modal-close-btn">Start New Order</button>
+    </div>
+  </div>
 </main>
+
 <footer>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 

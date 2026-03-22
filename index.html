@@ -19,18 +19,27 @@
 
     <div class="product-grid" id="product-grid">
 
-    </div>
-    <div class="cart">
-      <h2>Your Cart (<span class="cart-quantity">7</span>)</h2>
-      <div class="cart-empty-img">
-        <img src="assets/images/illustration-empty-cart.svg" alt="">
-      </div>
-      <ul class="cart-list">
-        <li>Your added items will appear here</li>
 
-
-      </ul>
     </div>
+  
+  </div>
+  <div class="cart">
+    <h2 class="cart-title">Your Cart (<span class="cart-count">0</span>)</h2>
+
+    <div class="cart-empty">
+      <img class="cart-empty-img" src="assets/images/illustration-empty-cart.svg" alt="Empty cart illustration">
+      <p class="cart-empty-text">Your added items will appear here</p>
+    </div>
+
+    <ul class="cart-items"></ul>
+
+    <div class="cart-total-container">
+      <span>Total: $<span class="cart-total">0.00</span></span>
+    </div>
+
+    <p class="cart-carbon">This is a carbon-neutral delivery 🌱</p>
+
+    <button class="cart-confirm">Confirm Order</button>
   </div>
 </main>
 <footer>

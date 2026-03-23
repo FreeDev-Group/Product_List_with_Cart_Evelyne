@@ -31,9 +31,9 @@ function renderProducts(){
             <button class="increment"><img src="assets/images/icon-increment-quantity.svg" alt="increment"></button>
           </div>
         </div>
-        <h6>${product.category}</h6>
-        <h4>${product.name}</h4>
-        <h5>$${product.price.toFixed(2)}</h5>
+        <h6 class="product-category">${product.category}</h6>
+        <h4 class="product-name">${product.name}</h4>
+        <h5 class="product-price">$${product.price.toFixed(2)}</h5>
       </div>
     `;
 
@@ -105,7 +105,7 @@ function updateCart(){
       <span class="item-quantity">${item.quantity}x </span>
       <span class="item-unit-price">@$${item.price.toFixed(2)}</span>
       <span class="item-total-price">$${(item.price*item.quantity).toFixed(2)}</span>
-      <button class="delete-item" data-index="${index}">&times;</button>
+      <button class="delete-item" data-index="${index}"><img src="assets/images/icon-remove-item.svg" alt="icon-remove-item"></button>
     `;
     li.querySelector(".delete-item").addEventListener("click",()=>{ delete cart[index]; updateUI(); });
     cartList.appendChild(li);
@@ -115,7 +115,7 @@ function updateCart(){
   cartTotal.textContent = total.toFixed(2);
 
   if(count===0){ emptyContainer.style.display="block"; cartList.style.display="none"; totalContainer.style.display="none"; carbonText.style.display="none"; confirmBtn.style.display="none"; }
-  else{ emptyContainer.style.display="none"; cartList.style.display="block"; totalContainer.style.display="block"; carbonText.style.display="block"; confirmBtn.style.display="block"; }
+  else{ emptyContainer.style.display="none"; cartList.style.display="block"; totalContainer.style.display="flex"; carbonText.style.display="flex"; confirmBtn.style.display="block"; }
 }
 
 // Modal

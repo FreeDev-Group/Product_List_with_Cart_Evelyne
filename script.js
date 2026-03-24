@@ -31,7 +31,7 @@ function renderProducts(){
             <button class="increment"><img src="assets/images/icon-increment-quantity.svg" alt="increment"></button>
           </div>
         </div>
-        <h6 class="product-category">${product.category}</h6>
+        <h5 class="product-category">${product.category}</h5>
         <h4 class="product-name">${product.name}</h4>
         <h5 class="product-price">$${product.price.toFixed(2)}</h5>
       </div>
